@@ -1,8 +1,6 @@
 # Divisor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/divisor`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+list divisors for integer.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```rb
+require 'divisor'
+
+p 100.divisors          #=> [1, 2, 4, 5, 10, 20, 25, 50, 100]
+p 100.each_diviror.to_a #=> [1, 2, 4, 5, 10, 20, 25, 50, 100]
+
+# `has_divisor?` and `divisible_by?` are same for alias.
+p 4.has_divisor?(2) #=> true
+p 4.divisible_by?(3) #=> false
+
+p 3.divisor_of?(9) #=> true
+p 4.divisor_of?(2) #=> false
+```
 
 ## Development
 
@@ -37,7 +47,7 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/[USERN
 
 ## License
 
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+The gem is available as open source under the terms of the CC0 License.
 
 ## Code of Conduct
 
