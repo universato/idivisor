@@ -1,8 +1,8 @@
-require_relative 'lib/divisor/version'
+require_relative 'lib/idivisor/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "divisor"
-  spec.version       = Divisor::VERSION
+  spec.name          = "idivisor"
+  spec.version       = Idivisor::VERSION
   spec.authors       = ["universato"]
   spec.email         = ["universato@gmail.com"]
 

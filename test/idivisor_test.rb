@@ -1,8 +1,8 @@
 require_relative "test_helper"
 
-class DivisorTest < Minitest::Test
+class IdivisorTest < Minitest::Test
   def test_that_it_has_a_version_number
-    refute_nil ::Divisor::VERSION
+    refute_nil ::Idivisor::VERSION
   end
 
   def test_divisors

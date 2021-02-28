@@ -1,13 +1,13 @@
-# Divisor
+# Idivisor
 
-list divisors for integer.
+list divisors for a integer.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'divisor'
+gem 'idivisor'
 ```
 
 And then execute:
@@ -21,7 +21,7 @@ Or install it yourself as:
 ## Usage
 
 ```rb
-require 'divisor'
+require 'idivisor'
 
 p 100.divisors          #=> [1, 2, 4, 5, 10, 20, 25, 50, 100]
 p 100.each_diviror.to_a #=> [1, 2, 4, 5, 10, 20, 25, 50, 100]

@@ -1,4 +1,4 @@
-require "divisor/version"
+require "idivisor/version"
 
 class Integer
   def divisible_by?(num)
