@@ -1,16 +1,25 @@
 require "idivisor/version"
 
 class Integer
-  def divisible_by?(num)
-    self % num == 0
+
+  # Returns +true+ if other integer is a divisor of self integer.
+  #   15.divisible_by?(5) #=> true
+  #   15.divisible_by?(4) #=> false
+  def divisible_by?(other)
+    self % other == 0
   end
   alias has_divisor? divisible_by?
 
-  def divisor_of?(num)
-    num % self == 0
+  # Returns +true+ if self integer is a divisor of other integer.
+  #   5.divisor_of?(15) #=> true
+  #   4.divisor_of?(15) #=> false
+  def divisor_of?(other)
+    other % self == 0
   end
 
-  # list positive divisors from positive integer.
+  # Returns an array of the divisors of the integer.
+  #   15.divisors #=> [1, 3, 5, 15]
+  #   16.divisors #=> [1, 2, 4, 8, 16]
   def divisors
     n = self # .abs
     s = Integer.sqrt(n)
@@ -26,6 +35,10 @@ class Integer
     res1.concat(res2)
   end
 
+  # list positive divisors from positive integer.
+  #   4.each_divisor do |i|
+  #     puts i
+  #   end
   def each_divisor
     return enum_for(:each_divisor) unless block_given?
 
