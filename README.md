@@ -57,4 +57,4 @@ The gem is available as open source under the terms of the CC0 License.
 
 ## Code of Conduct
 
-Everyone interacting in the Divisor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/divisor/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Divisor project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/universato/divisor/blob/master/CODE_OF_CONDUCT.md).
