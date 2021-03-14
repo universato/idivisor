@@ -1,6 +1,13 @@
 require "idivisor/version"
 
 class Integer
+  # Rails Active::Support.
+  #   0.multiple_of?(0)  # => true
+  #   6.multiple_of?(5)  # => false
+  #   10.multiple_of?(2) # => true
+  def multiple_of?(other)
+    other == 0 ? self == 0 : self % other == 0
+  end
 
   # Returns +true+ if other integer is a divisor of self integer.
   #   15.divisible_by?(5) #=> true
@@ -18,6 +25,10 @@ class Integer
   end
 
   # Returns an array of the divisors of the integer.
+  #    1.divisors #=> [1]
+  #    2.divisors #=> [1, 2]
+  #    3.divisors #=> [1, 3]
+  #    4.divisors #=> [1, 2, 4]
   #   15.divisors #=> [1, 3, 5, 15]
   #   16.divisors #=> [1, 2, 4, 8, 16]
   def divisors

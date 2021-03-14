@@ -69,4 +69,24 @@ class IdivisorTest < Minitest::Test
 
     assert 2.divisor_of?(0)
   end
+
+  def test_method_multiple_of?
+    assert 0.multiple_of?(0)
+    refute 6.multiple_of?(5)
+    assert 10.multiple_of?(2)
+
+    (-100..100).each{ |i| assert i.multiple_of?(1) }
+    (1..100).each{ |i| assert 0.multiple_of?(i) }
+    (1..100).each{ |i| assert i.multiple_of?(i) }
+    (1..100).each{ |i| refute i.multiple_of?(0) }
+
+    assert 100.multiple_of?(2)
+    refute 100.multiple_of?(3)
+    refute 100.multiple_of?(200)
+
+    assert(-100.multiple_of?(2))
+    assert(-100.multiple_of?(-2))
+    refute(-100.multiple_of?(3))
+    refute(-100.multiple_of?(-3))
+  end
 end
