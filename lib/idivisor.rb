@@ -55,11 +55,13 @@ class Integer
 
     s = Integer.sqrt(self)
     big_divisors = []
-    (1..s).each do |i|
+    i = 1
+    while i <= s
       if self % i == 0
         yield(i)
         big_divisors.unshift(self / i)
       end
+      i += 1
     end
     big_divisors.shift if s * s == self
     big_divisors.each{ |d| yield(d) }
